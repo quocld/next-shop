@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-import FooterMenu from 'components/layout/footer-menu';
 import LogoSquare from 'components/logo-square';
+import FooterMenu from './footer-menu';
 // import { getMenu } from 'lib/shopify';
 import { Suspense } from 'react';
 
@@ -11,7 +11,6 @@ export default async function Footer() {
   const currentYear = new Date().getFullYear();
   const copyrightDate = 2023 + (currentYear > 2023 ? `-${currentYear}` : '');
   const skeleton = 'w-full h-6 animate-pulse rounded-sm bg-neutral-200 dark:bg-neutral-700';
-  const menu = [];
   const copyrightName = COMPANY_NAME || SITE_NAME || '';
 
   return (
@@ -35,7 +34,7 @@ export default async function Footer() {
             </div>
           }
         >
-          <FooterMenu menu={menu} />
+          <FooterMenu />
         </Suspense>
         <div className="md:ml-auto">
           <a

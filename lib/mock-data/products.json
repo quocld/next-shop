@@ -5,7 +5,7 @@
       "title": "Wireless Headphones",
       "description": "Premium wireless headphones with noise cancellation",
       "price": 199.99,
-      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      "image": "https://chamberyjewelry.com/cdn/shop/files/463306299c5b586218a4a76007a98ac.jpg",
       "category": "Electronics",
       "rating": 4.5,
       "stock": 50
@@ -15,7 +15,7 @@
       "title": "Smart Watch",
       "description": "Fitness tracker and smart watch with heart rate monitor",
       "price": 149.99,
-      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      "image": "https://chamberyjewelry.com/cdn/shop/files/463306299c5b586218a4a76007a98ac.jpg",
       "category": "Electronics",
       "rating": 4.2,
       "stock": 30
@@ -25,10 +25,90 @@
       "title": "Running Shoes",
       "description": "Lightweight running shoes with cushion technology",
       "price": 89.99,
-      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      "image": "https://chamberyjewelry.com/cdn/shop/files/463306299c5b586218a4a76007a98ac.jpg",
       "category": "Sports",
       "rating": 4.7,
       "stock": 100
+    },
+    {
+      "id": "4",
+      "title": "Wireless Headphones",
+      "description": "Premium wireless headphones with noise cancellation",
+      "price": 199.99,
+      "image": "https://chamberyjewelry.com/cdn/shop/files/463306299c5b586218a4a76007a98ac.jpg",
+      "category": "Electronics",
+      "rating": 4.5,
+      "stock": 50
+    },
+    {
+      "id": "5",
+      "title": "Smart Watch",
+      "description": "Fitness tracker and smart watch with heart rate monitor",
+      "price": 149.99,
+      "image": "https://chamberyjewelry.com/cdn/shop/files/463306299c5b586218a4a76007a98ac.jpg",
+      "category": "Electronics",
+      "rating": 4.2,
+      "stock": 30
+    },
+    {
+      "id": "6",
+      "title": "Running Shoes",
+      "description": "Lightweight running shoes with cushion technology",
+      "price": 89.99,
+      "image": "https://chamberyjewelry.com/cdn/shop/files/463306299c5b586218a4a76007a98ac.jpg",
+      "category": "Sports",
+      "rating": 4.7,
+      "stock": 100
+    },
+    {
+      "id": "7",
+      "title": "Wireless Headphones",
+      "description": "Premium wireless headphones with noise cancellation",
+      "price": 199.99,
+      "image": "https://chamberyjewelry.com/cdn/shop/files/463306299c5b586218a4a76007a98ac.jpg",
+      "category": "Electronics",
+      "rating": 4.5,
+      "stock": 50
+    },
+    {
+      "id": "8",
+      "title": "Smart Watch",
+      "description": "Fitness tracker and smart watch with heart rate monitor",
+      "price": 149.99,
+      "image": "https://chamberyjewelry.com/cdn/shop/files/463306299c5b586218a4a76007a98ac.jpg",
+      "category": "Electronics",
+      "rating": 4.2,
+      "stock": 30
+    },
+    {
+      "id": "9",
+      "title": "Running Shoes",
+      "description": "Lightweight running shoes with cushion technology",
+      "price": 89.99,
+      "image": "https://chamberyjewelry.com/cdn/shop/files/463306299c5b586218a4a76007a98ac.jpg",
+      "category": "Sports",
+      "rating": 4.7,
+      "stock": 100
+    },
+    {
+      "id": "10",
+      "title": "Wireless Headphones",
+      "description": "Premium wireless headphones with noise cancellation",
+      "price": 199.99,
+      "image": "https://chamberyjewelry.com/cdn/shop/files/463306299c5b586218a4a76007a98ac.jpg",
+      "category": "Electronics",
+      "rating": 4.5,
+      "stock": 50
+    },
+    {
+      "id": "11",
+      "title": "Smart Watch",
+      "description": "Fitness tracker and smart watch with heart rate monitor",
+      "price": 149.99,
+      "image": "https://chamberyjewelry.com/cdn/shop/files/463306299c5b586218a4a76007a98ac.jpg",
+      "category": "Electronics",
+      "rating": 4.2,
+      "stock": 30
     }
   ]
-} 
+}

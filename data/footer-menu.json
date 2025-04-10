@@ -1,0 +1,134 @@
+{
+  "footerMenu": {
+    "customerService": {
+      "title": "Hỗ trợ khách hàng",
+      "items": [
+        {
+          "label": "Trung tâm trợ giúp",
+          "href": "/help-center"
+        },
+        {
+          "label": "Hướng dẫn mua hàng",
+          "href": "/how-to-buy"
+        },
+        {
+          "label": "Chính sách đổi trả",
+          "href": "/return-policy"
+        },
+        {
+          "label": "Chăm sóc khách hàng",
+          "href": "/customer-care"
+        }
+      ]
+    },
+    "aboutUs": {
+      "title": "Về chúng tôi",
+      "items": [
+        {
+          "label": "Giới thiệu",
+          "href": "/about"
+        },
+        {
+          "label": "Tuyển dụng",
+          "href": "/careers"
+        },
+        {
+          "label": "Hệ thống cửa hàng",
+          "href": "/stores"
+        },
+        {
+          "label": "Tin tức",
+          "href": "/news"
+        }
+      ]
+    },
+    "payment": {
+      "title": "Thanh toán",
+      "items": [
+        {
+          "label": "Ví điện tử",
+          "href": "/payment/wallet"
+        },
+        {
+          "label": "Thẻ tín dụng",
+          "href": "/payment/credit-card"
+        },
+        {
+          "label": "Chuyển khoản",
+          "href": "/payment/bank-transfer"
+        },
+        {
+          "label": "Thanh toán COD",
+          "href": "/payment/cod"
+        }
+      ]
+    },
+    "shipping": {
+      "title": "Vận chuyển",
+      "items": [
+        {
+          "label": "Giao hàng nhanh",
+          "href": "/shipping/express"
+        },
+        {
+          "label": "Giao hàng tiết kiệm",
+          "href": "/shipping/economy"
+        },
+        {
+          "label": "Theo dõi đơn hàng",
+          "href": "/track-order"
+        },
+        {
+          "label": "Tính phí vận chuyển",
+          "href": "/shipping/calculator"
+        }
+      ]
+    },
+    "legal": {
+      "title": "Pháp lý",
+      "items": [
+        {
+          "label": "Điều khoản sử dụng",
+          "href": "/legal/terms"
+        },
+        {
+          "label": "Chính sách bảo mật",
+          "href": "/legal/privacy"
+        },
+        {
+          "label": "Chính sách bảo hành",
+          "href": "/legal/warranty"
+        },
+        {
+          "label": "Quy định bảo mật",
+          "href": "/legal/security"
+        }
+      ]
+    },
+    "social": {
+      "title": "Kết nối với chúng tôi",
+      "items": [
+        {
+          "label": "Facebook",
+          "href": "https://facebook.com",
+          "icon": "facebook"
+        },
+        {
+          "label": "Zalo",
+          "href": "https://zalo.me",
+          "icon": "zalo"
+        },
+        {
+          "label": "TikTok",
+          "href": "https://tiktok.com",
+          "icon": "tiktok"
+        },
+        {
+          "label": "YouTube",
+          "href": "https://youtube.com",
+          "icon": "youtube"
+        }
+      ]
+    }
+  }
+} 

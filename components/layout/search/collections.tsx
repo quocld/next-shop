@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import { Suspense } from 'react';
 
+import { collections } from '@/lib/mock/collections';
 import FilterList from './filter';
 
 async function CollectionList() {
-  const collections = [];
   return <FilterList list={collections} title="Collections" />;
 }
 
