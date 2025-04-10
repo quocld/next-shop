@@ -1,7 +1,6 @@
-import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { defaultSort, sorting } from 'lib/constants';
-import { getProducts } from 'lib/shopify';
+import products from 'lib/mock-data/products.json';
 
 export const metadata = {
   title: 'Search',
@@ -15,24 +14,29 @@ export default async function SearchPage(props: {
   const { sort, q: searchValue } = searchParams as { [key: string]: string };
   const { sortKey, reverse } = sorting.find((item) => item.slug === sort) || defaultSort;
 
-  const products = await getProducts({ sortKey, reverse, query: searchValue });
-  const resultsText = products.length > 1 ? 'results' : 'result';
+  // Filter products based on search query
+  const filteredProducts = searchValue
+    ? products.products.filter((product) =>
+        product.title.toLowerCase().includes(searchValue.toLowerCase())
+      )
+    : products.products;
+
+  const resultsText = filteredProducts.length > 1 ? 'results' : 'result';
 
   return (
-    <>
-      {searchValue ? (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-2xl font-bold mb-4">Search Products</h1>
+      {searchValue && (
         <p className="mb-4">
-          {products.length === 0
+          {filteredProducts.length === 0
             ? 'There are no products that match '
-            : `Showing ${products.length} ${resultsText} for `}
+            : `Showing ${filteredProducts.length} ${resultsText} for `}
           <span className="font-bold">&quot;{searchValue}&quot;</span>
         </p>
-      ) : null}
-      {products.length > 0 ? (
-        <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          <ProductGridItems products={products} />
-        </Grid>
-      ) : null}
-    </>
+      )}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ProductGridItems products={filteredProducts} />
+      </div>
+    </div>
   );
 }

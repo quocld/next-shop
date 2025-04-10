@@ -1,4 +1,5 @@
-export default {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   experimental: {
     ppr: true,
     inlineCss: true,
@@ -9,9 +10,16 @@ export default {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**'
+      },
+      {
+        protocol: 'https',
         hostname: 'cdn.shopify.com',
         pathname: '/s/files/**'
       }
     ]
   }
 };
+
+export default nextConfig;
