@@ -1,12 +1,13 @@
+"use client"
 import clsx from 'clsx';
 import Image from 'next/image';
-import Label from '../label';
+import { useState } from 'react';
 
 export function GridTileImage({
   isInteractive = true,
   active,
   label,
-  ...props
+  images = [],
 }: {
   isInteractive?: boolean;
   active?: boolean;
@@ -16,34 +17,59 @@ export function GridTileImage({
     currencyCode: string;
     position?: 'bottom' | 'center';
   };
-} & React.ComponentProps<typeof Image>) {
+  images?: Array<{
+    url: string;
+    altText: string;
+    width: number;
+    height: number;
+  }>;
+}) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  if (images.length === 0) return null;
+
+  const currentImage = isHovered && images[1] ? images[1] : images[0];
+  if (!currentImage) return null;
+
   return (
     <div
       className={clsx(
-        'group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-white hover:border-blue-600 dark:bg-black',
+        'group flex h-full w-full items-center justify-center overflow-hidden border bg-white dark:bg-black',
         {
           relative: label,
           'border-2 border-blue-600': active,
           'border-neutral-200 dark:border-neutral-800': !active
         }
       )}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      {props.src ? (
-        <Image
-          className={clsx('relative h-full w-full object-contain', {
-            'transition duration-300 ease-in-out group-hover:scale-105': isInteractive
-          })}
-          {...props}
-        />
-      ) : null}
-      {label ? (
-        <Label
-          title={label.title}
-          amount={label.amount}
-          currencyCode={label.currencyCode}
-          position={label.position}
-        />
-      ) : null}
+      <div className="relative h-full w-full">
+        {images.length > 1 ? (
+          images.map((image, index) => (
+            <Image
+              key={image.url}
+              className={clsx('absolute h-full w-full object-cover transition-all duration-500', {
+                'opacity-100': (index === 0 && !isHovered) || (index === 1 && isHovered),
+                'opacity-0': (index === 0 && isHovered) || (index === 1 && !isHovered),
+                'group-hover:scale-105': isInteractive
+              })}
+              src={image.url}
+              alt={image.altText}
+              width={image.width}
+              height={image.height}
+            />
+          ))
+        ) : (
+          <Image
+            className={clsx('relative h-full w-full object-cover transition-all duration-300')}
+            src={currentImage.url}
+            alt={currentImage.altText}
+            width={currentImage.width}
+            height={currentImage.height}
+          />
+        )}
+      </div>
     </div>
   );
 }
