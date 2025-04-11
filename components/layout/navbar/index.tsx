@@ -25,7 +25,7 @@ export async function Navbar() {
         </div>
         <div className="flex justify-center flex-1 md:w-1/3">
           <Link href="/">
-            <h1 className="text-4xl font-carattere tracking-wider text-gray-900 dark:text-white [font-family:var(--font-carattere)]">Seraphine Jewelry</h1>
+            <h1 className="text-2xl md:text-4xl font-carattere tracking-wider text-gray-900 dark:text-white [font-family:var(--font-carattere)]">Seraphine Jewelry</h1>
           </Link>
         </div>
         <div className="flex justify-end md:w-1/3">

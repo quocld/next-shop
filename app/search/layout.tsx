@@ -13,7 +13,7 @@ export default function SearchLayout({
   return (
     <>
       <div className="mx-auto max-w-(--breakpoint-2xl)">
-        <div className="flex w-full items-center justify-center w-full my-10">
+        <div className="flex w-full items-center justify-center w-full md:my-6 p-4">
           <Search />
         </div>
         <div className="mx-auto flex max-w-(--breakpoint-2xl) flex-col gap-8 px-4 pb-4 text-black md:flex-row dark:text-white">

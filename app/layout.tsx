@@ -1,7 +1,7 @@
 import MarqueeBanner from 'components/MarqueeBanner';
+import { WelcomeToast } from 'components/WelcomeToast';
 import { CartProvider } from 'components/cart/cart-context';
 import { Navbar } from 'components/layout/navbar';
-import { WelcomeToast } from 'components/welcome-toast';
 import { getCart } from 'lib/shopify';
 import { baseUrl } from 'lib/utils';
 import type { Metadata } from 'next';
