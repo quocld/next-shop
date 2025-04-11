@@ -17,9 +17,9 @@ const Label = ({
       className={clsx('relative w-full @container/label')}
     >
       <div className="flex flex-col w-full bg-white/70 p-1 text-lg text-black dark:border-neutral-800 dark:bg-black/70 dark:text-white">
-        <h3 className="w-full mr-4 line-clamp-2 grow pl-2 leading-none tracking-tight">{title}</h3>
+        <h3 className="w-full mr-4 font-assistant font-semibold line-clamp-2 grow pl-2 leading-none tracking-tight">{title}</h3>
         <Price
-          className="flex-none p-2"
+          className="flex-none text-sm p-2"
           amount={amount}
           currencyCode={currencyCode}
           currencyCodeClassName="hidden @[275px]/label:inline"

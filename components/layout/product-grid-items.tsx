@@ -14,7 +14,7 @@ export default function ProductGridItems({
       {products.map((product) => {
         console.log(product)
         return (
-          <Grid.Item key={product.handle} className="animate-fadeIn">
+          <Grid.Item key={product.handle} className="animate-fadeIn relative">
           <Link
             className="relative inline-block h-full w-full"
             href={`/product/${product.handle}`}
@@ -33,6 +33,8 @@ export default function ProductGridItems({
               // sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
             />
           </Link>
+
+          <div className="absolute top-0 right-0 bg-[#E6B2BA] text-[#AC1754] px-3 py-1 m-2 text-sm">SALE</div>
 
           <div className="w-full">
             {product.title ? (
