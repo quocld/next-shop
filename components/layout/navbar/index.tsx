@@ -1,56 +1,32 @@
-import CartModal from 'components/cart/modal';
-import LogoSquare from 'components/logo-square';
-import { getMenu } from 'lib/shopify';
-import { Menu } from 'lib/shopify/types';
-import Link from 'next/link';
-import { Suspense } from 'react';
-import MobileMenu from './mobile-menu';
-import Search, { SearchSkeleton } from './search';
-
-const { SITE_NAME } = process.env;
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import CartModal from "components/cart/modal";
+import { getMenu } from "lib/shopify";
+import Link from "next/link";
+import { Suspense } from "react";
+import MobileMenu from "./mobile-menu";
+import { SearchSkeleton } from "./search";
+// const { SITE_NAME } = process.env;
 
 export async function Navbar() {
-  const menu = await getMenu('next-js-frontend-header-menu');
+  const menu = await getMenu("next-js-frontend-header-menu");
 
   return (
-    <nav className="relative flex items-center justify-between p-4 lg:px-6">
-      <div className="block flex-none md:hidden">
-        <Suspense fallback={null}>
-          <MobileMenu menu={menu} />
-        </Suspense>
-      </div>
-      <div className="flex w-full items-center">
-        <div className="flex w-full md:w-1/3">
-          <Link
-            href="/"
-            prefetch={true}
-            className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6"
-          >
-            <LogoSquare />
-            <div className="ml-2 flex-none text-sm font-medium uppercase md:hidden lg:block">
-              {SITE_NAME}
-            </div>
-          </Link>
-          {menu.length ? (
-            <ul className="hidden gap-6 text-sm md:flex md:items-center">
-              {menu.map((item: Menu) => (
-                <li key={item.title}>
-                  <Link
-                    href={item.path}
-                    prefetch={true}
-                    className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          ) : null}
-        </div>
-        <div className="hidden justify-center md:flex md:w-1/3">
-          <Suspense fallback={<SearchSkeleton />}>
-            <Search />
+    <nav className="relative flex items-center justify-between md:p-4 lg:px-6">
+      <div className="flex items-center justify-start w-full">
+        <div className="flex md:w-1/3 items-center">
+          <Suspense fallback={null}>
+            <MobileMenu menu={menu} />
           </Suspense>
+          <Suspense fallback={<SearchSkeleton />}>
+            <Link href="/search">
+              <MagnifyingGlassIcon className="h-4 md:h-5" />
+            </Link>
+          </Suspense>
+        </div>
+        <div className="flex justify-center flex-1 md:w-1/3">
+          <Link href="/">
+            <h1 className="text-4xl font-carattere tracking-wider text-gray-900 dark:text-white [font-family:var(--font-carattere)]">Seraphine Jewelry</h1>
+          </Link>
         </div>
         <div className="flex justify-end md:w-1/3">
           <CartModal />
