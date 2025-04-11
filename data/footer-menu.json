@@ -63,27 +63,6 @@
         }
       ]
     },
-    "shipping": {
-      "title": "Vận chuyển",
-      "items": [
-        {
-          "label": "Giao hàng nhanh",
-          "href": "/shipping/express"
-        },
-        {
-          "label": "Giao hàng tiết kiệm",
-          "href": "/shipping/economy"
-        },
-        {
-          "label": "Theo dõi đơn hàng",
-          "href": "/track-order"
-        },
-        {
-          "label": "Tính phí vận chuyển",
-          "href": "/shipping/calculator"
-        }
-      ]
-    },
     "legal": {
       "title": "Pháp lý",
       "items": [

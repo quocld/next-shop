@@ -1,20 +1,12 @@
 {
   "menu": [
     {
-      "title": "Trang chủ",
+      "title": "Home",
       "path": "/"
     },
     {
-      "title": "Sản phẩm",
-      "path": "/products"
-    },
-    {
-      "title": "Giới thiệu",
-      "path": "/about"
-    },
-    {
-      "title": "Liên hệ",
-      "path": "/contact"
+      "title": "All products",
+      "path": "/search"
     }
   ]
-} 
+}

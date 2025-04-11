@@ -24,7 +24,7 @@ export default async function SearchPage(props: {
   const resultsText = filteredProducts.length > 1 ? 'results' : 'result';
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto md:px-4 py-8">
       {/* <h1 className="text-2xl font-bold mb-4">Search Products</h1> */}
       {searchValue && (
         <p className="mb-4">
@@ -34,7 +34,7 @@ export default async function SearchPage(props: {
           <span className="font-bold">&quot;{searchValue}&quot;</span>
         </p>
       )}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 gap-y-13">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 gap-y-20 md:gap-y-18 lg:gap-y-18 mb-10">
         <ProductGridItems products={filteredProducts} />
       </div>
     </div>

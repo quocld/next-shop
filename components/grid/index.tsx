@@ -10,7 +10,7 @@ function Grid(props: React.ComponentProps<'ul'>) {
 
 function GridItem(props: React.ComponentProps<'li'>) {
   return (
-    <li {...props} className={clsx('h-92 transition-opacity', props.className)}>
+    <li {...props} className={clsx('h-48 md:h-64 lg:h-92 transition-opacity', props.className)}>
       {props.children}
     </li>
   );

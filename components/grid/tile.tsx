@@ -39,7 +39,7 @@ export function GridTileImage({
           />
         ) : null}
         <div className="absolute bottom-0 left-0 w-full bg-white/90 text-center p-2 opacity-0 translate-y-4 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0">
-          <button className="bg-rose-pink w-full text-white px-4 py-2">
+          <button className="bg-[#9D8189] w-full text-white px-4 py-2">
             Add to Cart
           </button>
         </div>

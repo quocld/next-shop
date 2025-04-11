@@ -1,31 +1,40 @@
-import clsx from 'clsx';
-import Price from './price';
+import clsx from "clsx";
+import Price from "./price";
 
 const Label = ({
   title,
   amount,
   currencyCode,
-  position = 'bottom'
+  position = "bottom",
 }: {
   title: string;
   amount: string;
   currencyCode: string;
-  position?: 'bottom' | 'center';
+  position?: "bottom" | "center";
 }) => {
   return (
     <div
-      className={clsx('relative bottom-0 left-0 flex w-full @container/label', {
-        'lg:px-20 lg:pb-[35%]': position === 'center'
+      className={clsx("relative bottom-0 left-0 flex w-full h-18 md:h-15 lg:h-15 @container/label", {
+        "lg:px-20 lg:pb-[35%]": position === "center",
       })}
     >
-      <div className="flex items-center w-full border bg-white/70 p-1 text-xs font-semibold text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white">
-        <h3 className="mr-4 line-clamp-2 grow pl-2 leading-none tracking-tight">{title}</h3>
-        <Price
-          className="flex-none bg-blue-600 p-2 text-white"
-          amount={amount}
-          currencyCode={currencyCode}
-          currencyCodeClassName="hidden @[275px]/label:inline"
-        />
+      <div className="items-center w-full bg-white/70 p-1 text-lg text-black backdrop-blur-md dark:bg-black/70">
+        <h3 className="mr-4 grow pl-2 leading-none tracking-tight">{title}</h3>
+        <div className="flex items-center">
+          <Price
+            className="pl-2 text-sm text-[#ef233c]"
+            amount={amount}
+            currencyCode={currencyCode}
+            currencyCodeClassName="hidden @[275px]/label:inline"
+          />
+          <Price
+            className="pl-2 text-sm text-[#8d99ae]"
+            amount={amount}
+            currencyCode={currencyCode}
+            currencyCodeClassName="hidden @[275px]/label:inline"
+            isOriginal
+          />
+        </div>
       </div>
     </div>
   );
